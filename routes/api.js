@@ -1,6 +1,8 @@
+
+//require dependecies
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
-
+// post route to transcation
 router.post("/api/transaction", ({body}, res) => {
   Transaction.create(body)
     .then(dbTransaction => {
